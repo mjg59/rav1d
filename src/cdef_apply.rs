@@ -12,7 +12,7 @@ use crate::src::internal::Rav1dFrameData;
 use crate::src::internal::Rav1dTaskContext;
 use crate::src::strided::Strided as _;
 use bitflags::bitflags;
-use libc::ptrdiff_t;
+pub type ptrdiff_t = isize;
 use std::cmp;
 use std::ffi::c_int;
 use std::ffi::c_uint;

@@ -17,13 +17,13 @@ pub enum Rav1dError {
     /// which is more optimal since `0` is no error for [`Dav1dResult`].
     EGeneric = 1,
 
-    ENOENT = libc::ENOENT as u8,
-    EIO = libc::EIO as u8,
-    EAGAIN = libc::EAGAIN as u8,
-    ENOMEM = libc::ENOMEM as u8,
-    EINVAL = libc::EINVAL as u8,
-    ERANGE = libc::ERANGE as u8,
-    ENOPROTOOPT = libc::ENOPROTOOPT as u8,
+    ENOENT = 2 as u8,
+    EIO = 5 as u8,
+    EAGAIN = 11 as u8,
+    ENOMEM = 12 as u8,
+    EINVAL = 22 as u8,
+    ERANGE = 34 as u8,
+    ENOPROTOOPT = 92 as u8,
 }
 
 pub type Rav1dResult<T = ()> = Result<T, Rav1dError>;

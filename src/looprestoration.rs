@@ -15,7 +15,7 @@ use crate::src::strided::Strided as _;
 use crate::src::tables::dav1d_sgr_x_by_x;
 use crate::src::wrap_fn_ptr::wrap_fn_ptr;
 use bitflags::bitflags;
-use libc::ptrdiff_t;
+pub type ptrdiff_t = isize;
 use std::cmp;
 use std::ffi::c_int;
 use std::ffi::c_uint;
@@ -960,7 +960,7 @@ mod neon {
 
     use crate::include::common::bitdepth::bd_fn;
     use crate::src::align::Align16;
-    use libc::intptr_t;
+    pub type intptr_t = isize;
     use std::ptr;
 
     wrap_fn_ptr!(unsafe extern "C" fn wiener_filter_h(

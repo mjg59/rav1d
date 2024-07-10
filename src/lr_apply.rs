@@ -15,7 +15,7 @@ use crate::src::strided::Strided as _;
 use crate::src::tables::dav1d_sgr_params;
 use assert_matches::assert_matches;
 use bitflags::bitflags;
-use libc::ptrdiff_t;
+pub type ptrdiff_t = isize;
 use std::cmp;
 use std::ffi::c_int;
 

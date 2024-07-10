@@ -11,7 +11,7 @@ use crate::src::strided::Strided as _;
 use crate::src::tables::dav1d_cdef_directions;
 use crate::src::wrap_fn_ptr::wrap_fn_ptr;
 use bitflags::bitflags;
-use libc::ptrdiff_t;
+pub type ptrdiff_t = isize;
 use std::cmp;
 use std::ffi::c_int;
 use std::ffi::c_uint;

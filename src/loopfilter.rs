@@ -14,7 +14,7 @@ use crate::src::lf_mask::Av1FilterLUT;
 use crate::src::strided::Strided as _;
 use crate::src::with_offset::WithOffset;
 use crate::src::wrap_fn_ptr::wrap_fn_ptr;
-use libc::ptrdiff_t;
+pub type ptrdiff_t = isize;
 use std::cmp;
 use std::ffi::c_int;
 use strum::FromRepr;
